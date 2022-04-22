@@ -1,28 +1,44 @@
 form {
     /* Center the form on the page */
     margin: 0 auto;
-    width: 600px;
+    width: 550px;
     /* Form outline */
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
 }
 
+#content{
+    
+}
+
+#header{
+    border: 1px solid black;
+}
+
 #formContainer {
+    
 }
 
 #names, #addresses, #passwords {
+    display: flex;
+    column-gap: 10px;
     position: relative;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 label {
     position: absolute;
     bottom: 40px;
-    
+}
+
+[for="last_name"], [for="tel"], [for*="confirm"]{
+    left: 280px;
 }
 
 input {
     padding: 10px;
+    width: 250px;
+    margin-right: auto;
 }
