@@ -9,7 +9,7 @@ form {
 }
 
 #content{
-    
+
 }
 
 #header{
@@ -22,7 +22,8 @@ form {
 
 #names, #addresses, #passwords {
     display: flex;
-    column-gap: 10px;
+    justify-content: space-around;
+    /* column-gap: auto; */
     position: relative;
     margin-bottom: 40px;
     margin-top: 40px;
@@ -33,12 +34,8 @@ label {
     bottom: 40px;
 }
 
-[for="last_name"], [for="tel"], [for*="confirm"]{
-    left: 280px;
-}
-
 input {
     padding: 10px;
-    width: 250px;
-    margin-right: auto;
+    width: 225px;
+
 }
