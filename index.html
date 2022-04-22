@@ -11,43 +11,70 @@
 <body>
     <div id="content">
         <div id="header">
-            This is not a real form
+            This is not a real online service but feel free to send your information into the ether.
+            I can't stop you. You must heed the call of the void.
         </div>
-        <div id="formContainer">
-            <form action="" method="post">
+        <form action="" method="post">
+            <div id="userInput">
                 <div id="names">
                     <div>
-                        <label for="first_name">First Name:</label>
-                        <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                        <label for="first_name">First Name:*</label>
+                        <input type="text" name="first_name" id="first_name" placeholder="First Name" pattern="[a-zA-Z]+" required>
                     </div>
                     <div>
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                        <label for="last_name">Last Name:*</label>
+                        <input type="text" name="last_name" id="last_name" placeholder="Last Name" pattern="[a-zA-Z]+" required>
                     </div>
                 </div>
                 <div id="addresses">
                     <div>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email">
+                        <label for="email">Email:*</label>
+                        <input type="email" name="email" id="email" placeholder=" " required>
                     </div>
                     <div>
-                        <label for="tel">Phone Number:</label>
-                        <input type="tel" id="tel" name="tel">
+                        <label for="tel">Phone Number:*</label>
+                        <input type="tel" id="tel" name="tel" placeholder="Ex: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     </div>
                 </div>
                 <div id="passwords">
                     <div>
-                        <label for="user_password">Password:</label>
-                        <input type="password" id="user_password" name="password">
+                        <label for="user_password">Password:*</label>
+                        <input type="password" id="user_password" name="password" required placeholder="Ex: sdH#7j*G" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}">
+                        <ul id="passwordReqs">
+                            <span>New Password Must Satisfy:</span>
+                            <li id="length">8-16 characters long</li>
+                            <li id="lowerCase">At least 1 lower case letter</li>
+                            <li id="upperCase">At least 1 upper case letter</li>
+                            <li id="isNum">At least 1 number</li>
+                            <li id="symbol">At least 1 symbol (!@#$%^&*_=+-)</li>
+                        </ul>
                     </div>
-
                     <div>
-                        <label for="user__confirm_password">Confirm Password:</label>
-                        <input type="password" id="user_confirm_password" name="confirmPassword">
+                        <label for="user__confirm_password">Confirm Password:*</label>
+                        <input type="password" id="user_confirm_password" name="confirmPassword" placeholder=" " required>
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+
+            <div id="submitButton">
+                <button type="submit">Create Account</button>
+                <span>Already have an account? <a href="https://cdn.ultiworld.com/wordpress/wp-content/uploads/2019/11/Sockeye-Abyss.jpg">Log In</a> </span>
+            </div>
+
+        </form>
     </div>
+
+    <button id="myBtn">Open Modal</button>
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Key type not allowed</p>
+            </div>
+        
+        </div>
+
 </body>
 </html>
