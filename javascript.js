@@ -9,6 +9,16 @@ let notPass = document.getElementsByName("password")
 let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 
+let confirmInput = document.getElementById("user_confirm_password");
+confirmInput.onkeyup = function () {
+    console.log(confirmInput.value)
+    if (confirmInput.value == myInput.value){
+        confirmInput.style.borderColor="green";
+    } else {
+        confirmInput.style.borderColor="red";
+    }
+}
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
@@ -23,6 +33,8 @@ window.onclick = function(event) {
 
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
+    console.log(myInput.value)
+
   // Validate lowercase letters
   let lowerCaseLetters = /[a-z]/g;
   if(myInput.value.match(lowerCaseLetters)) {  
@@ -72,7 +84,7 @@ myInput.onkeyup = function() {
     symbol.classList.add("invalid");
   }
 
-  let banned = /[ ~`(){} <> , . ? /]/g;
+  let banned = /[ ~`(){} <> , . ? ; : ' " /]/g;
   if (myInput.value.match(banned)) {
     // Get the modal
     modal.style.display = "block";
