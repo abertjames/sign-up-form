@@ -1,0 +1,28 @@
+form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 600px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+#formContainer {
+}
+
+#names, #addresses, #passwords {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+label {
+    position: absolute;
+    bottom: 40px;
+    
+}
+
+input {
+    padding: 10px;
+}
