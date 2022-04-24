@@ -1,28 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    display: flex;
+    /* justify-content: space-between; */
+}
 #userInput {
     /* Center the form on the page */
-    margin: 0 auto;
-    width: 550px;
-    height: 375px;
+    width:100vh;
+    height: 65vh;
     /* Form outline */
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
+}
+
+img{
+    /* position: absolute; */
+    width: 100vh;
 }
 
 #submitButton {
+    display: flex;
     /* Center the form on the page */
-    margin: 0 auto;
-    width: 550px;
+    width: 100vh;
+    height: 5vh;
     /* Form outline */
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
 }
 
 #header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* Center the form on the page */
-    margin: 0 auto;
-    width: 550px;
+    width: 100vh;
+    height: 15vh;
     /* Form outline */
     padding: 1em;
     border: 1px solid #CCC;
@@ -44,7 +64,8 @@ label {
 
 #passwordReqs {
     position: absolute;
-    left: -15px;
+    padding-top: 10px;
+    left: 55px;
 }
 #passwordReqs span {
     position: relative;
@@ -58,6 +79,10 @@ input {
 
 input:not(:placeholder-shown):invalid {
     border-color: red;
+}
+
+input[type*="password"]:focus{
+    outline: none;
 }
 
 input:valid {

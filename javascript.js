@@ -11,7 +11,6 @@ let span = document.getElementsByClassName("close")[0];
 
 let confirmInput = document.getElementById("user_confirm_password");
 confirmInput.onkeyup = function () {
-    console.log(confirmInput.value)
     if (confirmInput.value == myInput.value){
         confirmInput.style.borderColor="green";
     } else {
@@ -33,8 +32,6 @@ window.onclick = function(event) {
 
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
-    console.log(myInput.value)
-
   // Validate lowercase letters
   let lowerCaseLetters = /[a-z]/g;
   if(myInput.value.match(lowerCaseLetters)) {  
@@ -89,5 +86,11 @@ myInput.onkeyup = function() {
     // Get the modal
     modal.style.display = "block";
     myInput.value=myInput.value.slice(0,-1);
+    }
+
+    if (confirmInput.value == myInput.value){
+        confirmInput.style.borderColor="green";
+    } else {
+        confirmInput.style.borderColor="red";
     }
 }
