@@ -2,35 +2,60 @@
     margin: 0;
     padding: 0;
 }
+
+@font-face {
+    font-family: 'merriweather-reg';
+    src: url('fonts/merriweather-regular-webfont.woff2') format('woff2'),
+         url('fonts/merriweather-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'merriweather-italic-bold';
+    src: url('fonts/merriweather-blackitalic-webfont.woff2') format('woff2'),
+         url('fonts/merriweather-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
   
 body {
     display: flex;
-    /* justify-content: space-between; */
 }
+
+#content {
+    background: linear-gradient( #232726, #6dada3, #9a616a, #dca734);
+    /* background: linear-gradient( #232726, #6dada3, #dca734); */
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
 #userInput {
-    /* Center the form on the page */
-    width:100vh;
+    width:auto;
     height: 65vh;
-    /* Form outline */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+    /* padding: 5vw; */
 }
 
 img{
     /* position: absolute; */
+    width: auto;
+    height: 100vh;
+}
+
+#banner {
+    position: absolute;
     width: 100vh;
+    height: 25vh;
+    font: 5vh merriweather-italic-bold;
+    top: 1vh;
+    left: 20vh;
+    color: #dca734;
 }
 
 #submitButton {
     display: flex;
-    /* Center the form on the page */
-    width: 100vh;
+    width: auto;
     height: 5vh;
-    /* Form outline */
     padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
     justify-content: center;
     align-items: center;
     column-gap: 10px;
@@ -40,18 +65,17 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Center the form on the page */
-    width: 100vh;
+    width: auto;
     height: 15vh;
-    /* Form outline */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+    font: 1rem merriweather-reg;
 }
 
 #names, #addresses, #passwords {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    /* padding-left: 5vw;
+    padding-right: 5vw; */
+    /* gap: 5vw; */
     position: relative;
     margin-bottom: 40px;
     margin-top: 40px;
@@ -65,16 +89,29 @@ label {
 #passwordReqs {
     position: absolute;
     padding-top: 10px;
-    left: 55px;
+    left: 1vw;
 }
 #passwordReqs span {
     position: relative;
-    left: -15px;
+    left: -1vw;
+}
+
+button {
+    padding: 1em 2em;
+    border-radius: 1em;
+    border-color: #000;
+    background-color: #9a616a;
+    color: #fefefe;
+}
+button:hover{
+    background-color: #6dada3;
 }
 
 input {
     padding: 10px;
     width: 225px;
+    border-radius: 1em;
+    border-color: #000;
 }
 
 input:not(:placeholder-shown):invalid {
